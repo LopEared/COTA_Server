@@ -1,0 +1,64 @@
+<?php
+
+/*
+// Показывать информацию только о загруженных модулях.
+// phpinfo(8) выдает тот же результат.
+//phpinfo(INFO_MODULES);
+
+echo '<p>Привет, мир!</p>';
+//echo $_SERVER['HTTP_USER_AGENT'];
+// Показывать всю информацию, по умолчанию INFO_ALL
+#phpinfo();
+
+/*phpinfo();*/
+/*
+$file = 'people.txt';
+if (file_exists($file)) {
+    echo "Файл $file существует";
+} else {
+    echo "Файл $filen не существует";
+}
+
+// Открываем файл для получения существующего содержимого
+$current = file_get_contents($file);
+// Добавляем нового человека в файл
+$current .= "John Smith\n";
+// Пишем содержимое обратно в файл
+file_put_contents($file, $current);
+
+
+*/
+echo '<p>Привет, мир!</p>';
+
+echo date("Y-m-d_G:i:s");
+$date_name=date("Y-m-d-G:i:s");
+$file_name="$date_name.txt";
+if(!file_exists($file_name)){
+    echo 'Создаем файл';
+	$fp=fopen($file_name,"w");
+    fclose($fp);
+}
+else{
+	echo 'Файл существует';
+}
+
+
+
+
+
+/*
+$file_name='myfile.txt';
+if(!file_exists($file_name)){
+    echo 'Создаем файл';
+	$fp=fopen($file_name,"w");
+    fclose($fp);
+}
+else{
+	echo 'Файл существует';
+}
+
+
+
+*/
+
+?>
